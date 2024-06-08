@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-q#%u%68w-la3j-94$5)cg3%p2z1&y@9snr1!)w_fs1s30!yzsc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-hpcoloma-djangoblog-n7vf4p56xzr.ws-eu114.gitpod.io', '.herokuapp.com']
+ALLOWED_HOSTS = [
+    '8000-hpcoloma-djangoblog-n7vf4p56xzr.ws-eu114.gitpod.io',
+    '.herokuapp.com'
+    ]
 
 
 # Application definition
@@ -117,6 +120,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Add this line to specify the directory where static files will be collected
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Optionally, specify additional directories to look for static files
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
